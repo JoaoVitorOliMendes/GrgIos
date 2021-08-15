@@ -16,7 +16,7 @@ class register: UIViewController {
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var txtConfirmarSenha: UITextField!
     
-    private var user: user!
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,22 @@ class register: UIViewController {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         }else {
-            
+            if !txtSenha.text!.elementsEqual(txtConfirmarSenha.text!) {
+                let alert = UIAlertController(title: "Erro", message: "As senhas estáo diferentes", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .destructive)
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+            }else {
+                let userVar = user(
+                    nome: txtNome.text!,
+                    email: txtEmail.text!,
+                    telefone: txtTelefone.text!,
+                    cpf: txtCpf.text!,
+                    senha: txtSenha.text!
+                )
+                defaults.set(userVar, forKey: "Login")
+                performSegue(withIdentifier: "Login", sender: nil)
+            }
         }
     }
     

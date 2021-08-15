@@ -112,7 +112,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYy-lP-y4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xPS-3B-EXF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="-9.375"/>
+            <point key="canvasLocation" x="-1375" y="18"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DaN-62-Gfb">
@@ -335,6 +335,7 @@
                         <outlet property="txtNome" destination="MUr-uP-ir7" id="12r-aF-2Y8"/>
                         <outlet property="txtSenha" destination="xQg-9Y-eGR" id="dP7-zU-FD7"/>
                         <outlet property="txtTelefone" destination="nuZ-jA-xQg" id="Rch-Lr-Mdx"/>
+                        <segue destination="E9Z-W9-NJz" kind="presentation" identifier="Login" id="0av-aS-OVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmS-gF-RMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -730,6 +731,10 @@
             <point key="canvasLocation" x="2421.739130434783" y="693.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZW8-vB-920"/>
+        <segue reference="0av-aS-OVP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="WhatsApp Image 2021-08-13 at 08.10.34" width="358" height="210"/>
     </resources>
