@@ -44,8 +44,12 @@ class register: UIViewController {
                     cpf: txtCpf.text!,
                     senha: txtSenha.text!
                 )
-                defaults.set(userVar, forKey: "Login")
-                performSegue(withIdentifier: "Login", sender: nil)
+                defaults.set(userVar.nome, forKey: "nome" + userVar.email)
+                defaults.set(userVar.email, forKey: "email" + userVar.email)
+                defaults.set(userVar.telefone, forKey: "telefone" + userVar.email)
+                defaults.set(userVar.cpf, forKey: "cpf" + userVar.email)
+                defaults.set(userVar.senha, forKey: "senha" + userVar.email)
+                navigationController?.popViewController(animated: true)
             }
         }
     }
