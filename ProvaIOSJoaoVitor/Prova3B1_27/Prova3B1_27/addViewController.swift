@@ -32,7 +32,7 @@ class addViewController: UIViewController {
                 descricao: txtDescricao.text!
             )
             mainVc?.appendValue(product: p)
-            navigationController?.popToViewController(mainVc!, animated: true)
+            navigationController?.pushToViewController(mainVc!, animated: true)
         }
     }
 }
